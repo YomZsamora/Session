@@ -3,27 +3,35 @@ package models;
 public class Students {
 
     private int id;
-    private String studentName;
+    private String student_name;
     private String track;
-    private String highSchool;
+    private String highschool;
     private int age;
-    private String studentDescription;
-    private String kyuLevel;
-    private int completedKatas;
+    private String description;
+    private int kyu_level;
+    private int katas_completed;
 
 
-    public Students(String studentName, String track, String highSchool, int age, String studentDescription, String kyuLevel, int completedKatas){
-        this.studentName = studentName;
+    public Students(String student_name, String track, String highschool, int age, String description, int kyu_level, int katas_completed){
+        this.student_name = student_name;
         this.track = track;
-        this.highSchool = highSchool;
+        this.highschool = highschool;
         this.age = age;
-        this.studentDescription = studentDescription;
-        this.kyuLevel = kyuLevel;
-        this.completedKatas = completedKatas;
+        this.description = description;
+        this.kyu_level = kyu_level;
+        this.katas_completed = katas_completed;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getStudentName() {
-        return studentName;
+        return student_name;
     }
 
     public String getTrack() {
@@ -31,7 +39,7 @@ public class Students {
     }
 
     public String getHighSchool() {
-        return highSchool;
+        return highschool;
     }
 
     public int getAge() {
@@ -39,14 +47,14 @@ public class Students {
     }
 
     public String getStudentDescription() {
-        return studentDescription;
+        return description;
     }
 
-    public String getKyuLevel() {
-        return kyuLevel;
+    public int getKyuLevel() {
+        return kyu_level;
     }
 
     public int getCompletedKatas() {
-        return completedKatas;
+        return katas_completed;
     }
 }
