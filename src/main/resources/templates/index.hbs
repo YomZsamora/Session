@@ -1,0 +1,85 @@
+{{#partial "content"}}
+
+<div class="container">
+    <div class="row">
+        <h1>Student Management System</h1>
+        <a class="btn btn-success btn-sm btn-block" href="/addNewRecords">Add a New Class</a>
+    </div>
+    <div class="row">
+        <div class="col-md-3 cohorts">
+            <div class="one-class">
+                <h4>MC19</h4>
+                <p>Total Number of Students: 51</p>
+                <small>Technical Mentor: <strong>Samora Yommie</strong></small>
+            </div>
+            <div class="one-class">
+                <h4>MC18</h4>
+                <p>Total Number of Students: 40</p>
+                <small>Technical Mentor: <strong>Boyd Ndonga</strong></small>
+            </div>
+            <div class="one-class">
+                <h4>MC17</h4>
+                <p>Total Number of Students: 34</p>
+                <small>Technical Mentor: <strong>Peter Muturi</strong></small>
+            </div>
+        </div>
+        <div class="col-md-5 students">
+            <div class="one-student">           
+                <h4>Samora Yommie</h4>
+                <p>Highschool Attended: Hospital Hill High</p>
+                <p class="description">"My Bio Should Just Say Caffeinated"</p>
+                <small>
+                    Track: <strong>Android</strong>, 
+                    Completed Katas: <strong>67</strong>, 
+                    KYU Level: <strong>4kyu</strong>, 
+                    Age: <strong>27</strong>
+                </small>
+            </div>
+        </div>
+        <div class="col-md-4 add-student">
+            <h4>Add New Student Here</h4>
+            <form action="/addStudent" method="post" name="updateStylist">
+                <div class="form-group">
+                    <label class="label">Student's Name</label>
+                    <input type="text" name="student_name" id="student_name" placeholder="Last Name, First Name" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label class="label">Highschool</label>
+                    <input type="text" name="highschool" id="highschool" placeholder="Enter Highschool" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label class="label">Student Age</label>
+                    <input type="number" name="student_age" id="student_age" placeholder="Student Age" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label class="label">KYU Level</label>
+                    <input type="number" name="kyu_level" id="kyu_level" placeholder="Enter KYU Level " class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label class="label">Completed Katas</label>
+                    <input type="number" name="katas_completed" id="katas_completed" placeholder="Number of Completed Katas " class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label class="label">Track Chosen</label>
+                    <select data-placeholder="Choose Track.." name="track" id="track" class="form-control">
+                        <option label=""></option>
+                        <option value="Full Stack">Full Stack</option>
+                        <option value="Android">Android</option>
+                    </select>
+                </div>
+                <div class="form-group ">
+                    <label class="label">Description / Bio</label>
+                    <textarea name="description" id="description" placeholder="Post a Description..." class="form-control mb15" ></textarea>
+                </div>
+                <button type="submit" class="btn btn-success btn-xs "><i class="fa fa-edit" aria-hidden="true"></i>&nbsp;&nbsp;Add Student</button>
+                <button type="reset" class="btn btn-default btn-xs"><i class="fa fa-times" aria-hidden="true"></i>&nbsp;&nbsp;Cancel</button>
+            </form>
+
+        </div>
+    </div>
+    <div class="row"></div>
+</div>
+
+{{/partial}}
+
+{{> layout.hbs}}
